@@ -1,0 +1,26 @@
+.navbar-default {
+    background-color: #E15554 !Important;
+    border-color: red;
+    color: white;
+
+   }
+
+  .navbar-brand img {
+  	height: 100px;
+  }
+
+  .navbar {
+  	margin-bottom: 0;
+  }
+
+
+.header {
+  border-radius: 10%;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  white-space: nowrap;
+  margin-top: 20%;
+  margin-left: 50%;
+}
+

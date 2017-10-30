@@ -1,5 +1,5 @@
 @extends('applayout')
-
+@extends('layouts.app')
 @section('main_content')
 <a href='{{ url("articles/create") }}' class="btn btn-primary">Create New Article</a>
 

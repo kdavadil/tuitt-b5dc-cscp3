@@ -1,0 +1,43 @@
+Colors
+
+E15554 - jelly bean
+4D9DE0 - carolina blue
+
+Roles
+1 Mentor
+2 Mentee
+3 Admin
+
+
+Features
+
+Post Question
+Comment
+Up Vote
+Add Goal 
+Set Frequency
+Invite Accountability Partners
+User Profile
+Set User rank
+Apply as Coach.
+
+
+Pages
+
+Home
+Goals
+NewsFeed
+Userprofile
+Category Selection
+
+Design
+
+Favicon
+
+
+
+
+
+
+
+
