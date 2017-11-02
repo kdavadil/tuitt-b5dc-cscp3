@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('articles', 
@@ -41,6 +41,10 @@ Route::get('articles/{id}/edit',
 
 Route::post('articles/{id}/edit', 
 	'ArticlesController@edit');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/goals', 'HomeController@showGoals')->name('goals');
+

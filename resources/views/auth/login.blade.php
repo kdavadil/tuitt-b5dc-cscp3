@@ -66,4 +66,7 @@
         </div>
     </div>
 </div>
+
+@include('layouts.footer') {{-- Include footer file --}}  
+
 @endsection

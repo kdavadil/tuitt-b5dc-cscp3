@@ -11,7 +11,7 @@ use Auth;
 class ArticlesController extends Controller
 {
     function showArticles(){
-    	$articles = Article::all();
+    	$articles = Article::paginate(5);
     	//SELECT * FROM articles;
 
     	return view('articles.articles_list', 

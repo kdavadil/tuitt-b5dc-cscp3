@@ -1,7 +1,7 @@
 .navbar-default {
-    background-color: #E15554 !Important;
+    background-color: #E15554 !important;
     border-color: red;
-    color: white;
+    color: white !important;
 
    }
 
@@ -10,17 +10,104 @@
   }
 
   .navbar {
-  	margin-bottom: 0;
+  	margin-bottom: 0 !important;
   }
 
 
 .header {
   border-radius: 10%;
-  display: inline-block;
-  vertical-align: middle;
   text-align: center;
-  white-space: nowrap;
-  margin-top: 20%;
-  margin-left: 50%;
+  position: relative;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFFFFF;
+
+
 }
 
+.header h1 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 50px;
+}
+
+.header img {
+  margin-top: 80px;
+  position: relative;
+}
+
+.bg2 {
+  background-color: lightblue;.
+  text-align: center;
+
+}
+
+.bg2 .thumbnail {
+
+  padding: 10px 10px;
+  margin: 20px 20px;
+  width:  300px;
+  text-align: center;
+}
+
+.bg2 .row {
+    margin-left: 100px;
+}
+
+span {
+  font-size: 60px;
+}
+
+
+#btn-start {
+  text-align: center;
+  position: relative;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 10px;
+}
+
+  @media only screen and (max-width: 321px) {
+  .bg1 {
+    height: 400px;
+    background-image: none;
+    margin-left: 0;
+  }
+
+  .header h1{
+    color: white;
+    font-size: 30px;
+ 
+  }
+
+  .bg2 .row  {
+    margin-left: 0 !important;
+  }
+
+  .bg2 .thumbnail {
+    margin: 5px 0 !important;
+  }
+}
+   @media only screen and (min-width: 321px) and (max-width: 760px) {
+  .bg1 {
+    height: 500px;
+    margin: 0 auto;
+  }
+
+  .header h1{
+    color: white;
+    font-size: 20px;
+
+  }
+
+  .bg2 .row  {
+    margin-left: 30px;
+  }
+
+   .bg2 .thumbnail {
+    width: 300px;
+   }
+
+
+}

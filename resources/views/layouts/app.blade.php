@@ -10,67 +10,61 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Home') }}</title>
+    <title></title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 
     <style type="text/css">
 
           .bg1 {
         /* The image used */
-        background-image: url("{{asset('images/crossfit-534615.jpg')}}");
+        background-color: #F08080;
 
         /* Full height */
-        height: 700px; 
+        height: 500px; 
         width: 100%;
         /* Center and scale the image nicely */
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-       /*filter:saturate(5);*/
+        -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
     }
 
     .navbar-default {
-    background-color: #E15554 !Important;
+    background-color: #E15554 !important;
     border-color: red;
-    color: white;
+    color: white !important;
 
    }
 
-  .navbar-brand img {
-    height: 100px;
+  .navbar-brand {
+    color: white !important;
   }
-
-  
-#learn_more {
-  border-radius: 10%;
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
-  white-space: nowrap;
-  margin-top: 30%;
-  margin-left: 70%;
-}
 
 
   .navbar {
     margin-bottom: 0;
   }
 
-  @media only screen and (max-width: 320px) {
+/*  @media only screen and (max-width: 320px) {
   .bg1 {
     height: 300px;
      background-position:right center;
   }
-
+}
    @media only screen and (min-width: 321px) and (max-width: 760px) {
   .bg1 {
     height: 400px;
      background-position: right center;
   }
 }
-
+*/
 
     </style>
 </head>
