@@ -1,0 +1,16 @@
+
+#left-side {
+	position: relative;
+	width: 100%;
+	margin-top: 20px;
+}
+
+#date-nav {
+
+	text-align: center;
+	margin-left: 25px;
+    line-height: 3em;
+    font-weight: bold;
+}
+
+

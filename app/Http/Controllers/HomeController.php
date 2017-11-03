@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Goal;
+use App\Usergoal;
+use App\User;
+use Session;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -26,9 +31,33 @@ class HomeController extends Controller
         return view('home');
     }
 
-        public function showGoals()
+    public function showGoals()
     {
-        return view('goals');
+        $goals = Usergoal::all();
+        return view('layouts.goals', compact('goals'));
+    }
+
+    function create() {
+        return view('layouts.goals_create');
+    }
+
+        function store(Request $request) {
+
+        $new_goals = new Usergoal();
+        $new_goals->goal = $request->goal;
+        $new_goals->description = $request->Description;
+        $new_goals->priority = $request->Priority;
+        $new_goals->name = Auth::user()->name;
+        $new_goals->save();
+
+        return redirect('goals');
+    }
+
+     function edit_goal($id) {
+        $goal_tbe = Usergoal::find($id);
+
+        return view('layouts.goal_show_form',
+            compact('goal_tbe'));
     }
 
 

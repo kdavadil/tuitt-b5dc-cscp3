@@ -48,3 +48,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/goals', 'HomeController@showGoals')->name('goals');
 
+Route::get('goals_create', 
+	'HomeController@create');
+
+
+Route::post('goals_create', 
+	'HomeController@store');
+
