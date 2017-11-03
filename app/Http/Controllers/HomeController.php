@@ -56,7 +56,7 @@ class HomeController extends Controller
      function edit_goal($id) {
         $goal_tbe = Usergoal::find($id);
 
-        return view('layouts.goal_show_form',
+        return view('layouts.goal_show_single_item',
             compact('goal_tbe'));
     }
 

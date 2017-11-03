@@ -55,3 +55,6 @@ Route::get('goals_create',
 Route::post('goals_create', 
 	'HomeController@store');
 
+Route::get('goals/{id}', 
+	'HomeController@edit_goal');
+
