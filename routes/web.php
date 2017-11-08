@@ -30,6 +30,7 @@ Route::post('articles/create',
 
 Route::get('articles/{id}', 
 	'ArticlesController@show');
+
 Route::post('articles/{id}', 
 	'CommentController@store');
 
@@ -51,10 +52,18 @@ Route::get('/goals', 'HomeController@showGoals')->name('goals');
 Route::get('goals_create', 
 	'HomeController@create');
 
-
 Route::post('goals_create', 
 	'HomeController@store');
 
 Route::get('goals/{id}', 
 	'HomeController@edit_goal');
+
+Route::get('goals/{id}/edit', 
+	'HomeController@save_goal');
+
+Route::post('goals/{id}/edit', 
+	'HomeController@save_goal');
+
+Route::get('goals/{id}/delete', 
+	'HomeController@delete_goal');
 

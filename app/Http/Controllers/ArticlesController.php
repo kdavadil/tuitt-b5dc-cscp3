@@ -31,8 +31,7 @@ class ArticlesController extends Controller
     }
 
     function store(Request $request) {
-        // echo $request->title ." ". $request->content;
-              //$_POST['title']       $_POST['content']
+  
 
         $new_article = new Article();
         $new_article->title = $request->title;

@@ -1,77 +1,111 @@
+
 @extends('layouts.app')
+
+
  <title>Goals</title>
 @section('content')
 <link href="{{ asset('css/goals.css') }}" rel="stylesheet">
 
+<!-- left side -->
+
 <section id="left-side">
 	<div class="container">
 		<div class="col-xs-12 col-sm-6">
- 		
- <div class="panel panel-danger">
-	<div class="panel-heading">
+ 		<!-- Start of Panel -->
+     <div class="panel panel-danger">
+	   <div class="panel-heading">
 		
-	<nav class="navbar navbar-default">
-  <div class="container-fluid">
-<!--     <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
-    </div> -->
-    <ul class="nav navbar-left">
-      <li><a href="#">EDIT</a></li>
-    </ul>
+      	<nav class="navbar navbar-default">
+           <div class="container-fluid">
 
-      <span id="date-nav">
-        
+          <ul class="nav navbar-left">
+           <span id="date-nav">
+  
         <script> document.write(new Date().toLocaleDateString()); </script>
 
-      </span>
+          </span>
 
-    <ul class="nav navbar-right">
-      <li><a href='{{ url("goals_create") }}'>ADD</a></li>
+          </ul>
+
+     <ul class="nav navbar-right">
+      <li><a href='{{ url("goals_create") }}'>
+     <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
+      </a></li>
      </ul>
 
-  </div>
-	</nav>
+          </div>
+	     </nav>
 
-	</div>
-
- 	<div class="panel-body">
+	   </div>
+ <!-- GOALS LIST -->
+ <div class="panel-body">
  		
- <div class="list-group">
- @foreach($goals as $goal)
-  <a href='{{ url("goals/$goal->id") }}' class="list-group-item">
+  <div class="list-group">
+      @foreach($goals as $goal)
+
+  <form>
+  <button class="btn-block" data-id="{{ $goal->id }}">
+    <a href='#' class="list-group-item" id="goal_link">
+ 
+  <!-- <i class="fa fa-pencil-square-o" aria-hidden="true"></i> -->
+
     {{ $goal->description }}
-  </a>
-@endforeach
-</div>
 
+      </a>
+    </button>
+  </form>
+      @endforeach
+  </div>
 
- 	</div>
- 	<div class="panel-footer">
- 			
- 	</div>
-</div>
+ 	</div> <!-- end of Panel Body -->
+ 	
+  </div> <!-- end of Panel -->
 
-		
-		</div>
+  </div> <!-- end of left side -->
+
 
   <div class="col-xs-12 col-sm-6">
-  <div class="thumbnail">
-    
-    <label>Goal:</label>
-    <span></span>
-    <label>Priority</label>
-    <span></span>
-    <label>Completed:</label>
-    <span></span>
 
+  <!-- <div class="thumbnail"> -->
+     
+  <div class="panel-group">
+  <div class="panel panel-primary">
+
+<div class="panel-heading">Goal Status</div>
+  <div class="panel-body">
+      <div id="completion">   
+
+
+        </div>
+       </div>
+     </div>
+    </div>
+   <!-- Quote Section -->
+   <div class="thumbnail">
+     <h2>Quote</h2>
+   </div>
   </div>
 
-  </div> 
+  </div> <!-- end of container -->
 
-	</div>
 </section>
 
+	
+  </div> 
 
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    var id = $(this).data('id')
+    $("#completion").load("goals/"+id);
+  });
+});
+</script>
 
 
 @include('layouts.footer') {{-- Include footer file --}}  

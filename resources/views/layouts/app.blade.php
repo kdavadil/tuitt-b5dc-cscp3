@@ -52,25 +52,12 @@
     margin-bottom: 0;
   }
 
-/*  @media only screen and (max-width: 320px) {
-  .bg1 {
-    height: 300px;
-     background-position:right center;
-  }
-}
-   @media only screen and (min-width: 321px) and (max-width: 760px) {
-  .bg1 {
-    height: 400px;
-     background-position: right center;
-  }
-}
-*/
-
     </style>
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
+        <!--  -->
             <div class="container">
                 <div class="navbar-header">
 
@@ -96,6 +83,8 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
+
+
                         <!-- Authentication Links -->
                         @guest
                             <li><a href="{{ route('login') }}">Login</a></li>
@@ -107,6 +96,17 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+  
+    <li>
+        <a href="{{url('home')}}">Home
+    </li>
+    <li>
+      <a href="{{url('goals')}}">My Goals
+    </li>
+    <li>
+        <a href="{{url('newsfeed')}}">Newsfeed
+    </li>
+
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
@@ -118,6 +118,7 @@
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
+
                                 </ul>
                             </li>
                         @endguest
