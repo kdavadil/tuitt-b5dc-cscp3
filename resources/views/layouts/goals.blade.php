@@ -79,7 +79,7 @@
      </div>
     </div>
    <!-- Quote Section -->
-   <div class="thumbnail">
+   <div class="quote thumbnail">
      <p>"If people knew how hard I worked to get my mastery, it wouldn't seem so wonderful at all."</p>
      <blockquote>MICHELANGELO</blockquote>
    </div>

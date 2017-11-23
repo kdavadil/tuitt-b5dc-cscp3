@@ -129,10 +129,9 @@
         </h3>
         </div>
 
-    @foreach($goal->get_comments as $comment)
+    @foreach($goal->comments as $comment)
         <p>{{ $comment->description." by ".$comment->get_usergoals->name." at ".$comment->created_at }}</p>
     @endforeach
-
 
                 <label>Add Your Comment:</label>
 <form method="POST" action='{{url("/newsfeed")}}' class="form-horizontal">
