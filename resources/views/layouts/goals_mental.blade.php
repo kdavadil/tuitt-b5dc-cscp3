@@ -1,25 +1,28 @@
 
 @extends('layouts.app')
 
+<link href="{{ asset('css/goals.css') }}" rel="stylesheet">
+
 @section('content')
 
-<form method="POST" class="form-horizontal">
+<h2>Choose below:</h2>
+<form method="POST"  action='{{ url("goals_mental/store") }}' class="form-horizontal">
   {{ csrf_field() }}
   <div class="form-group">
-    <label class="control-label col-sm-2" for="goal">Goal</label>
+    <!-- <label class="control-label col-sm-2" for="goal">Goal</label> -->
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="goal" name="goal" placeholder="Enter your Goal">
+      <input type="text" class="form-control" id="goal" name="goal" value="Mental">
     </div>
   </div>
 
     <div class="form-group">
     <label class="control-label col-sm-2" for="Description">Description</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="Description" name="Description" placeholder="Enter Description">
+      <input type="text" class="form-control" id="Description" name="Description" placeholder="Enter Description" required>
     </div>
   </div>
 
-  <div class="form-group">
+      <div class="form-group">
     <label class="control-label col-sm-2" for="Priority">Priority</label>
     <div class="col-sm-10">
     <select id="Priority" name="Priority" class="form-control">
@@ -36,6 +39,8 @@
     </div>
   </div>
 </form>
+
+@include('layouts.footer') {{-- Include footer file --}}  
 
 @endsection
 

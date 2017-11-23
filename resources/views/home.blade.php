@@ -1,8 +1,11 @@
 @extends('layouts.app')
 
+
  <title>Home</title>
 
 @section('content')
+
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -20,7 +23,13 @@
         <h1>MENTOR PH</h1>
          <h4>“A mentor is someone who sees more talent and ability within you, than you see in yourself, and helps bring it out of you.” 
 ― Bob Proctor</h4>
-        <button id="sign-up" class="btn-success btn-lg">LEARN MORE</button>
+        <!-- <button id="sign-up" class="btn-success btn-lg">LEARN MORE</button> -->
+
+       
+    <a href="/goals"><button id="btn-start" class="btn-primary btn-lg">GET STARTED</button></a>
+        
+
+
          </div>
         </div> 
    
@@ -56,9 +65,7 @@
     </div>
   </div>
 
-  <div class="col-xs-12 container-fluid">
-    <a href="/goals"><button id="btn-start" class="btn-primary btn-lg">GET STARTED</button></a>
-  </div>
+
 
   </div>
   
